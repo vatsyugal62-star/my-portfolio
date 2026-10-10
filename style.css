@@ -154,6 +154,11 @@ button {
 }
 
 /* --- CUSTOM CURSOR --- */
+@media (hover: hover) and (pointer: fine) {
+  *:not(input):not(textarea) {
+    cursor: none !important;
+  }
+}
 #custom-cursor {
   position: fixed;
   top: 0;
