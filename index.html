@@ -1,0 +1,711 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Yugal Vats — Graphic Designer & Visual Identity Specialist</title>
+  <meta name="description" content="Portfolio of Yugal Vats, Delhi-based Graphic Designer specializing in brand identity systems, editorial magazines, posters, YouTube click-through packaging, and social media systems.">
+  <meta name="author" content="Yugal Vats">
+  <meta property="og:title" content="Yugal Vats — Graphic Design & Visual Systems">
+  <meta property="og:description" content="Design that holds its ink before it dries. Selected works in Branding, Editorial, Posters, and Digital Media.">
+  <meta property="og:type" content="website">
+
+  <!-- Favicon icon -->
+  <link rel="icon" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'><circle cx='50' cy='50' r='45' fill='%23c9a876'/><text x='50' y='65' font-family='sans-serif' font-size='50' font-weight='bold' fill='%2309090b' text-anchor='middle'>Y</text></svg>">
+
+  <!-- Preconnect & Fonts -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Instrument+Serif:ital@0;1&family=Plus+Jakarta+Sans:wght@300;400;500;600;700&family=Space+Grotesk:wght@400;500;600;700&family=Syne:wght@500;600;700;800&family=Space+Mono:wght@400;700&display=swap" rel="stylesheet">
+
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+  <!-- AMBIENT BACKGROUNDS -->
+  <div id="grain" aria-hidden="true"></div>
+  <div class="ambient-glow glow-1" aria-hidden="true"></div>
+  <div class="ambient-glow glow-2" aria-hidden="true"></div>
+  <div id="scroll-progress"></div>
+
+  <!-- CUSTOM PRECISION CURSOR -->
+  <div id="custom-cursor" aria-hidden="true">
+    <div class="cursor-dot"></div>
+    <div class="cursor-ring"></div>
+    <span class="cursor-text"></span>
+  </div>
+
+  <!-- TOAST NOTIFICATION -->
+  <div id="toast" role="status" aria-live="polite">Email copied to clipboard!</div>
+
+  <!-- NAVIGATION -->
+  <header>
+    <nav class="site-nav" id="site-nav">
+      <div class="nav-brand">
+        <a href="#hero" class="nav-logo" data-cursor="YUGAL">YUGAL<span>.</span></a>
+        <div class="nav-status">
+          <span class="pulse-dot"></span> Available 2026
+        </div>
+      </div>
+
+      <div class="nav-links">
+        <a href="#flagships" class="nav-link" data-cursor="VIEW">Featured</a>
+        <a href="#works" class="nav-link" data-cursor="VIEW">Archive</a>
+        <a href="#disciplines" class="nav-link" data-cursor="VIEW">Disciplines</a>
+        <a href="#studio" class="nav-link" data-cursor="VIEW">Studio</a>
+        <a href="#contact" class="nav-link" data-cursor="VIEW">Contact</a>
+      </div>
+
+      <div class="nav-actions">
+        <button class="theme-toggle" id="theme-toggle" title="Toggle theme mode" data-cursor="THEME">
+          <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="12" cy="12" r="5"/><line x1="12" y1="1" x2="12" y2="3"/><line x1="12" y1="21" x2="12" y2="23"/><line x1="4.22" y1="4.22" x2="5.64" y2="5.64"/><line x1="18.36" y1="18.36" x2="19.78" y2="19.78"/><line x1="1" y1="12" x2="3" y2="12"/><line x1="21" y1="12" x2="23" y2="12"/><line x1="4.22" y1="19.78" x2="5.64" y2="18.36"/><line x1="18.36" y1="5.64" x2="19.78" y2="4.22"/></svg>
+          <span class="toggle-text">Light</span>
+        </button>
+        <button class="audio-toggle" id="audio-toggle" title="Toggle tactile sound effects" data-cursor="AUDIO">
+          <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M11 5L6 9H2v6h4l5 4V5zM19.07 4.93a10 10 0 0 1 0 14.14M15.54 8.46a5 5 0 0 1 0 7.07"/></svg>
+          <span class="toggle-text">Sound Off</span>
+        </button>
+        <a href="#contact" class="nav-cta" data-cursor="START">Start a Project</a>
+        <button class="mobile-menu-btn" id="mobile-menu-btn" aria-label="Toggle Navigation Menu" aria-expanded="false" aria-controls="mobile-nav-drawer">
+          <span></span>
+          <span></span>
+          <span></span>
+        </button>
+      </div>
+    </nav>
+  </header>
+
+  <!-- MOBILE NAVIGATION DRAWER -->
+  <div class="mobile-nav-drawer" id="mobile-nav-drawer">
+    <a href="#hero" class="mobile-nav-link">Top</a>
+    <a href="#flagships" class="mobile-nav-link">Featured Works</a>
+    <a href="#works" class="mobile-nav-link">Full Archive</a>
+    <a href="#disciplines" class="mobile-nav-link">Disciplines & Process</a>
+    <a href="#studio" class="mobile-nav-link">Studio & Tools</a>
+    <a href="#contact" class="mobile-nav-link">Contact / Inquire</a>
+  </div>
+
+  <main>
+    <!-- ============================================================
+         HERO SECTION
+         ============================================================ -->
+    <section class="hero-section" id="hero">
+      <div class="page-container">
+        <div class="hero-grid">
+          <div class="hero-content">
+            <div class="hero-badge">
+              <span class="pin"></span>
+              <span>Graphic Designer · Delhi, India</span>
+            </div>
+
+            <h1 class="hero-title">
+              Design that<br>
+              holds its <span class="italic-serif">ink</span><br>
+              <span class="stroke-text">before it dries.</span>
+            </h1>
+
+            <p class="hero-lead">
+              I build visual identities across branding, packaging, editorial, and cover art — a practice equally at home on a shelf, a screen, or a thumbnail. Six disciplines, one uncompromising point of view.
+            </p>
+
+            <div class="hero-actions">
+              <a href="#flagships" class="btn-primary" data-cursor="EXPLORE">
+                Explore Selected Works
+                <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2"><path d="M5 12h14M12 5l7 7-7 7"/></svg>
+              </a>
+              <a href="#contact" class="btn-secondary" data-cursor="BRIEF">
+                Initiate Project Brief ↗
+              </a>
+            </div>
+
+            <div class="hero-stats-row">
+              <div class="hero-stat-item">
+                <div class="num">06</div>
+                <div class="label">Disciplines</div>
+              </div>
+              <div class="hero-stat-item">
+                <div class="num" id="hero-work-count">40</div>
+                <div class="label">Selected Works</div>
+              </div>
+              <div class="hero-stat-item">
+                <div class="num">100%</div>
+                <div class="label">Bespoke Design</div>
+              </div>
+              <div class="hero-stat-item">
+                <div class="num">Delhi</div>
+                <div class="label">Studio Base</div>
+              </div>
+            </div>
+          </div>
+
+          <!-- Hero Interactive Perspective Card Stack -->
+          <div class="hero-visual-stack" aria-hidden="true">
+            <div class="hero-card card-1" data-cursor="STARBOY">
+              <img src="essentials/pol1.jpg" alt="Starboy Halftone Art" fetchpriority="high" decoding="async">
+              <div class="card-caption">
+                <span>Starboy</span>
+                <small>Halftone Print</small>
+              </div>
+            </div>
+            <div class="hero-card card-2" data-cursor="DEV D">
+              <img src="essentials/pol3.jpg" alt="Dev D Pop Art" fetchpriority="high" decoding="async">
+              <div class="card-caption">
+                <span>Dev D</span>
+                <small>Editorial Poster</small>
+              </div>
+            </div>
+            <div class="hero-card card-3" data-cursor="BREAKING BAD">
+              <img src="essentials/P1.jpg" alt="Breaking Bad Poster" fetchpriority="high" decoding="async">
+              <div class="card-caption">
+                <span>Breaking Bad</span>
+                <small>Concept Poster</small>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <div class="hero-scroll-pill">
+        <div class="line"></div>
+        <span>Scroll to Discover</span>
+      </div>
+    </section>
+
+    <!-- MARQUEE TICKER -->
+    <div class="marquee-container" aria-hidden="true">
+      <div class="marquee-track">
+        <div class="marquee-item">Brand Identity Systems <span class="bullet">✦</span></div>
+        <div class="marquee-item">Editorial & Publication Design <span class="bullet">✦</span></div>
+        <div class="marquee-item">Large-Format Posters & Prints <span class="bullet">✦</span></div>
+        <div class="marquee-item">High-CTR YouTube Packaging <span class="bullet">✦</span></div>
+        <div class="marquee-item">Curated Social Media Feed Kits <span class="bullet">✦</span></div>
+        <div class="marquee-item">Art-Directed Magazine Covers <span class="bullet">✦</span></div>
+        <!-- Duplicated for seamless loop -->
+        <div class="marquee-item">Brand Identity Systems <span class="bullet">✦</span></div>
+        <div class="marquee-item">Editorial & Publication Design <span class="bullet">✦</span></div>
+        <div class="marquee-item">Large-Format Posters & Prints <span class="bullet">✦</span></div>
+        <div class="marquee-item">High-CTR YouTube Packaging <span class="bullet">✦</span></div>
+        <div class="marquee-item">Curated Social Media Feed Kits <span class="bullet">✦</span></div>
+        <div class="marquee-item">Art-Directed Magazine Covers <span class="bullet">✦</span></div>
+      </div>
+    </div>
+
+    <!-- ============================================================
+         FLAGSHIP MASTERPIECES (Curated Case Studies Spotlight)
+         ============================================================ -->
+    <section class="flagship-section" id="flagships">
+      <div class="page-container">
+        <div class="section-tag">Curated Case Studies</div>
+        <h2 class="section-heading"><em>selected artpieces</em></h2>
+        <p class="section-desc">
+          Flagship visual systems spanning bespoke café branding, reimagined multinational FMCG packaging, luxury dry fruits, and high-editorial fashion spreads.
+        </p>
+
+        <div class="flagship-grid">
+
+          <article class="flagship-item ">
+            <div class="flagship-media" onclick="openLightboxById('social-chess')" data-cursor="VIEW">
+              <img src="essentials/CHESS.png" alt="Chess, Open Tournament Poster" loading="lazy" decoding="async">
+              <div class="media-badge">
+                <svg width="12" height="12" viewBox="0 0 24 24" fill="currentColor"><circle cx="12" cy="12" r="10"/></svg>
+                Social Media
+              </div>
+              <button class="carousel-cta-btn">
+                <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="11" cy="11" r="8"/><line x1="21" y1="21" x2="16.65" y2="16.65"/><line x1="11" y1="8" x2="11" y2="14"/><line x1="8" y1="11" x2="14" y2="11"/></svg>
+                Inspect Project
+              </button>
+            </div>
+            <div class="flagship-text">
+              <div class="flagship-num">— 01 / Social Media</div>
+              <h3 class="flagship-title">Chess, Open Tournament Poster</h3>
+              <div class="flagship-subtitle">High,Contrast Instagram Poster</div>
+              <div class="flagship-pov-box">
+                <div class="pov-label">✦ Designer's POV</div>
+                <p>Built the composition around oversized typography and a dramatic chess-piece silhouette to create immediate visual impact. The stark black-and-white contrast, red chess pieces, and structured event information balance bold editorial styling with practical readability.</p>
+              </div>
+              <div class="flagship-actions">
+                <button class="btn-primary" onclick="openLightboxById('social-chess')" data-cursor="EXPAND">
+                  Preview Project ↗
+                </button>
+              </div>
+            </div>
+          </article>
+
+          <article class="flagship-item reverse">
+            <div class="flagship-media" onclick="openLightboxById('poster-06')" data-cursor="VIEW">
+              <img src="essentials/P6.jpg" alt="Fight Club , Movie Poster Design" loading="lazy" decoding="async">
+              <div class="media-badge">
+                <svg width="12" height="12" viewBox="0 0 24 24" fill="currentColor"><circle cx="12" cy="12" r="10"/></svg>
+                Posters
+              </div>
+              <button class="carousel-cta-btn">
+                <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="11" cy="11" r="8"/><line x1="21" y1="21" x2="16.65" y2="16.65"/><line x1="11" y1="8" x2="11" y2="14"/><line x1="8" y1="11" x2="14" y2="11"/></svg>
+                Inspect Project
+              </button>
+            </div>
+            <div class="flagship-text">
+              <div class="flagship-num">— 02 / Posters</div>
+              <h3 class="flagship-title">Fight Club , Movie Poster Design</h3>
+              <div class="flagship-subtitle">Tone & Texture Study</div>
+              <div class="flagship-pov-box">
+                <div class="pov-label">✦ Designer's POV</div>
+                <p>Combined high-contrast black-and-white portraits, distressed textures, and fragmented editorial elements to reflect Fight Club’s psychological tension. The layered composition and bold typography create visual conflict, reinforcing the film’s themes of identity, control, and inner rebellion.</p>
+              </div>
+              <div class="flagship-actions">
+                <button class="btn-primary" onclick="openLightboxById('poster-06')" data-cursor="EXPAND">
+                  Preview Project ↗
+                </button>
+              </div>
+            </div>
+          </article>
+
+          <article class="flagship-item ">
+            <div class="flagship-media" onclick="openLightboxById('nutrivaan')" data-cursor="VIEW">
+              <img src="essentials/covpic3.png" alt="Nutrivaan , Premium Dry Fruits" loading="lazy" decoding="async">
+              <div class="media-badge">
+                <svg width="12" height="12" viewBox="0 0 24 24" fill="currentColor"><circle cx="12" cy="12" r="10"/></svg>
+                Branding
+              </div>
+              <button class="carousel-cta-btn">
+                <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="11" cy="11" r="8"/><line x1="21" y1="21" x2="16.65" y2="16.65"/><line x1="11" y1="8" x2="11" y2="14"/><line x1="8" y1="11" x2="14" y2="11"/></svg>
+                Inspect Project
+              </button>
+            </div>
+            <div class="flagship-text">
+              <div class="flagship-num">— 03 / Branding</div>
+              <h3 class="flagship-title">Nutrivaan , Premium Dry Fruits</h3>
+              <div class="flagship-subtitle">Luxury Lifestyle Dry Fruits Identity</div>
+              <div class="flagship-pov-box">
+                <div class="pov-label">✦ Designer's POV</div>
+                <p>This packaging and brand staging focuses on organic elegance. The logo mark elegantly integrates leaf motifs into a classic serif 'N'. The layout relies on rich, golden hour lighting and deep greens to convey purity and premium quality, letting the natural textures of the walnuts and almonds take center stage in the visual hierarchy.</p>
+              </div>
+              <div class="flagship-actions">
+                <button class="btn-primary" onclick="openLightboxById('nutrivaan')" data-cursor="EXPAND">
+                  Preview Project ↗
+                </button>
+              </div>
+            </div>
+          </article>
+
+          <article class="flagship-item reverse">
+            <div class="flagship-media" onclick="openLightboxById('lady-magazine')" data-cursor="VIEW">
+              <img src="essentials/coverpic5.png" alt="ATELIER , Fashion Magazine Cover" loading="lazy" decoding="async">
+              <div class="media-badge">
+                <svg width="12" height="12" viewBox="0 0 24 24" fill="currentColor"><circle cx="12" cy="12" r="10"/></svg>
+                Magazines
+              </div>
+              <button class="carousel-cta-btn">
+                <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="11" cy="11" r="8"/><line x1="21" y1="21" x2="16.65" y2="16.65"/><line x1="11" y1="8" x2="11" y2="14"/><line x1="8" y1="11" x2="14" y2="11"/></svg>
+                Inspect Project
+              </button>
+            </div>
+            <div class="flagship-text">
+              <div class="flagship-num">— 04 / Magazines</div>
+              <h3 class="flagship-title">ATELIER , Fashion Magazine Cover</h3>
+              <div class="flagship-subtitle">Contemporary Fashion & Culture Publication</div>
+              <div class="flagship-pov-box">
+                <div class="pov-label">✦ Designer's POV</div>
+                <p>A masterclass in editorial color blocking. The stark crimson red of the model's outfit perfectly aligns with the oversized masthead, creating a bold visual anchor against the muted grey background. The typographic hierarchy uses a highly elegant didone serif, with asymmetrical left-aligned supporting text to balance the central portrait.</p>
+              </div>
+              <div class="flagship-actions">
+                <button class="btn-primary" onclick="openLightboxById('lady-magazine')" data-cursor="EXPAND">
+                  Preview Project ↗
+                </button>
+              </div>
+            </div>
+          </article>
+
+          <article class="flagship-item ">
+            <div class="flagship-media" onclick="openLightboxById('magazine-cover-01')" data-cursor="VIEW">
+              <img src="essentials/MC1.jpg" alt="HEAVEN , Streetwear Issue" loading="lazy" decoding="async">
+              <div class="media-badge">
+                <svg width="12" height="12" viewBox="0 0 24 24" fill="currentColor"><circle cx="12" cy="12" r="10"/></svg>
+                Magazine Covers
+              </div>
+              <button class="carousel-cta-btn">
+                <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="11" cy="11" r="8"/><line x1="21" y1="21" x2="16.65" y2="16.65"/><line x1="11" y1="8" x2="11" y2="14"/><line x1="8" y1="11" x2="14" y2="11"/></svg>
+                Inspect Project
+              </button>
+            </div>
+            <div class="flagship-text">
+              <div class="flagship-num">— 05 / Magazine Covers</div>
+              <h3 class="flagship-title">HEAVEN , Streetwear Issue</h3>
+              <div class="flagship-subtitle">Urban Fashion Editorial</div>
+              <div class="flagship-pov-box">
+                <div class="pov-label">✦ Designer's POV</div>
+                <p>This cover blends high-contrast photography with a bold, sky-textured display font. The visual hierarchy places the masthead 'HEAVEN' behind the subject to create depth, while the vibrant blue sky contrasts with the monochromatic, textured streetwear subject. The layout conveys a surreal, quick-paced fashion aesthetic.</p>
+              </div>
+              <div class="flagship-actions">
+                <button class="btn-primary" onclick="openLightboxById('magazine-cover-01')" data-cursor="EXPAND">
+                  Preview Project ↗
+                </button>
+              </div>
+            </div>
+          </article>
+
+          <article class="flagship-item reverse">
+            <div class="flagship-media" onclick="openLightboxById('thumb-02')" data-cursor="VIEW">
+              <img src="essentials/T2.jpg" alt="Exploring Power, Wealth, and Global Influence" loading="lazy" decoding="async">
+              <div class="media-badge">
+                <svg width="12" height="12" viewBox="0 0 24 24" fill="currentColor"><circle cx="12" cy="12" r="10"/></svg>
+                Thumbnails
+              </div>
+              <button class="carousel-cta-btn">
+                <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="11" cy="11" r="8"/><line x1="21" y1="21" x2="16.65" y2="16.65"/><line x1="11" y1="8" x2="11" y2="14"/><line x1="8" y1="11" x2="14" y2="11"/></svg>
+                Inspect Project
+              </button>
+            </div>
+            <div class="flagship-text">
+              <div class="flagship-num">— 06 / Thumbnails</div>
+              <h3 class="flagship-title">Exploring Power, Wealth, and Global Influence</h3>
+              <div class="flagship-subtitle">Documentary</div>
+              <div class="flagship-pov-box">
+                <div class="pov-label">✦ Designer's POV</div>
+                <p>Documentary-style YouTube thumbnail exploring power, wealth, and global influence through cinematic visuals, bold composition, and symbolic storytelling designed to spark curiosity and maximize engagement.</p>
+              </div>
+              <div class="flagship-actions">
+                <button class="btn-primary" onclick="openLightboxById('thumb-02')" data-cursor="EXPAND">
+                  Preview Project ↗
+                </button>
+              </div>
+            </div>
+          </article>
+        </div>
+      </div>
+</section>
+
+    <!-- ============================================================
+         FULL WORKS ARCHIVE (Dynamic Filter & Search for 35+ Assets)
+         ============================================================ -->
+    
+    <section class="section" style="text-align: center; padding: 6rem 0; position: relative;">
+      <style>
+        .glowing-archive-wrapper {
+          position: relative;
+          display: inline-block;
+        }
+        .glowing-archive-btn {
+          position: relative;
+          z-index: 2;
+          box-shadow: 0 0 15px rgba(212, 175, 55, 0.4), inset 0 0 10px rgba(212, 175, 55, 0.1);
+          border: 1px solid rgba(212, 175, 55, 0.5);
+          transition: all 0.4s ease;
+        }
+        .glowing-archive-btn:hover {
+          box-shadow: 0 0 30px rgba(212, 175, 55, 0.6), inset 0 0 15px rgba(212, 175, 55, 0.3);
+          border-color: rgba(212, 175, 55, 0.9);
+        }
+        .particle {
+          position: absolute;
+          width: 4px;
+          height: 4px;
+          background: #d4af37;
+          border-radius: 50%;
+          pointer-events: none;
+          opacity: 0;
+          box-shadow: 0 0 8px #d4af37, 0 0 12px #d4af37;
+          z-index: 1;
+        }
+      </style>
+      
+      <div class="page-container">
+        <h2 class="section-heading" style="margin-bottom: 3rem;">Wana have a look at everything <em>I've done?</em></h2>
+        <div class="glowing-archive-wrapper" id="archive-btn-wrapper">
+          <a href="archive.html" class="btn-primary glowing-archive-btn" style="padding: 1rem 3rem; font-size: 1.2rem; letter-spacing: 2px;">
+            Complete archives
+          </a>
+        </div>
+      </div>
+
+      <script>
+        document.addEventListener('DOMContentLoaded', () => {
+          const wrapper = document.getElementById('archive-btn-wrapper');
+          if (!wrapper) return;
+          
+          setInterval(() => {
+            const particle = document.createElement('div');
+            particle.classList.add('particle');
+            
+            const startX = 20 + Math.random() * 60; 
+            const startY = 30 + Math.random() * 40; 
+            
+            const angle = Math.random() * Math.PI * 2;
+            const distance = 50 + Math.random() * 100;
+            const tx = Math.cos(angle) * distance;
+            const ty = Math.sin(angle) * distance;
+            
+            const duration = 2500 + Math.random() * 2000;
+            
+            particle.style.left = \`\${startX}%\`;
+            particle.style.top = \`\${startY}%\`;
+            
+            wrapper.appendChild(particle);
+            
+            particle.animate([
+              { transform: 'translate(0, 0) scale(1)', opacity: 0 },
+              { opacity: 0.8, offset: 0.2 },
+              { opacity: 0.8, offset: 0.8 },
+              { transform: \`translate(\${tx}px, \${ty}px) scale(0.5)\`, opacity: 0 }
+            ], {
+              duration: duration,
+              easing: 'cubic-bezier(0.25, 0.46, 0.45, 0.94)',
+              fill: 'forwards'
+            });
+            
+            setTimeout(() => {
+              particle.remove();
+            }, duration);
+          }, 350);
+        });
+      </script>
+    </section>
+
+
+    <!-- ============================================================
+         DISCIPLINES & PROCESS (Interactive 6-Service Explorer)
+         ============================================================ -->
+    <section class="services-section" id="disciplines">
+      <div class="page-container">
+        <div class="section-tag">Design Disciplines</div>
+        <h2 class="section-heading">How I think & <em>execute</em>.</h2>
+        <p class="section-desc">
+          Every project is built on clear thinking, rigorous typography, and disciplined execution. Click any discipline below to view its deliverables, 4-step workflow, and design philosophy.
+        </p>
+
+        <div class="services-container">
+          <div class="service-accordion" id="service-accordion-list">
+            <!-- Dynamically populated from SERVICES_DATA in app.js -->
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ============================================================
+         STUDIO & CRAFT MANIFESTO
+         ============================================================ -->
+    <section class="studio-section" id="studio">
+      <div class="page-container">
+        <div class="studio-grid">
+          <div class="studio-visual">
+            <div class="rings-mark-3d" aria-hidden="true">
+              <div class="ring-3d ring-3d-1"></div>
+              <div class="ring-3d ring-3d-2"></div>
+              <div class="ring-3d ring-3d-3"></div>
+              <div class="ring-3d ring-3d-4"></div>
+            </div>
+          </div>
+
+          <div class="studio-text">
+            <div class="section-tag">— 01 / Studio Manifesto</div>
+            <blockquote class="manifesto-quote">
+              "I build visual work with <em>clear thinking</em>, sharp typography, and enough character to make people <em>stop for a second.</em>"
+            </blockquote>
+
+            <p class="studio-bio">
+              Based in Delhi, India, working with clients and agencies globally. My approach merges classical Swiss typographic restraint with high-impact digital composition. Whether crafting an A0 screenprinted exhibition poster or a thumbnail engineered for mobile YouTube feeds, the standard never slips: clarity first, character always.
+            </p>
+
+            <div class="tools-stack-title">Core Software & Craft Stack</div>
+            <div class="tools-stack-grid">
+              <div class="tool-card">
+                <div class="t-name">Adobe Photoshop</div>
+                <div class="t-role">Retouching & Compositing</div>
+              </div>
+              <div class="tool-card">
+                <div class="t-name">Adobe Illustrator</div>
+                <div class="t-role">Identity & Vectors</div>
+              </div>
+              <div class="tool-card">
+                <div class="t-name">Adobe InDesign</div>
+                <div class="t-role">Editorial & Spreads</div>
+              </div>
+              <div class="tool-card">
+                <div class="t-name">Typography & Lettering</div>
+                <div class="t-role">Hierarchy & Glyphs</div>
+              </div>
+              <div class="tool-card">
+                <div class="t-name">Behance Studio</div>
+                <div class="t-role">Showcase & Case Studies</div>
+              </div>
+              <div class="tool-card">
+                <div class="t-name">Print Pre-Flight</div>
+                <div class="t-role">CMYK & Large-Format</div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ============================================================
+         INTERACTIVE BRIEF ESTIMATOR & CONTACT
+         ============================================================ -->
+    <section class="contact-section" id="contact">
+      <div class="page-container">
+        <div class="contact-grid">
+          <!-- Left: Direct Reachout -->
+          <div class="contact-direct">
+            <div class="section-tag">Let's Work Together</div>
+            <h2 class="contact-title">Got a brief?<br>Send it <em>over.</em></h2>
+            <p class="contact-desc">
+              Currently accepting new commissions for branding identities, publication layouts, packaging concepts, and high-CTR creator kits. Direct inquiries receive a response within 24 hours.
+            </p>
+
+            <!-- 1-Click Copy Email Box -->
+            <div class="email-copy-box copy-email-btn" title="Click to copy email address" data-cursor="COPY">
+              <div class="email-address">✉ yugalbusiness26@gmail.com</div>
+              <div class="copy-badge">
+                <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><rect x="9" y="9" width="13" height="13" rx="2" ry="2"/><path d="M5 15H4a2 2 0 0 1-2-2V4a2 2 0 0 1 2-2h9a2 2 0 0 1 2 2v1"/></svg>
+                Copy
+              </div>
+            </div>
+
+            <div class="social-links-row">
+              <a href="https://www.instagram.com/dsng._.yug" target="_blank" rel="noopener noreferrer" class="social-pill" data-cursor="INSTA">
+                Instagram ↗
+              </a>
+              <a href="https://www.behance.net/yugalvats" target="_blank" rel="noopener noreferrer" class="social-pill" data-cursor="BEHANCE">
+                Behance ↗
+              </a>
+              <a href="https://www.linkedin.com/in/yugal-vats-a57448429?utm_source=share_via&amp;utm_content=profile&amp;utm_medium=member_android" target="_blank" rel="noopener noreferrer" class="social-pill" data-cursor="LINKEDIN">
+                LinkedIn ↗
+              </a>
+            </div>
+          </div>
+
+          <!-- Right: Interactive Project Scope Estimator -->
+          <div class="estimator-card">
+            <h3>Project Scope Builder</h3>
+            <p class="est-sub">Configure your project details to generate a structured brief instantly.</p>
+
+            <div class="estimator-field">
+              <label class="estimator-label">1. Primary Discipline</label>
+              <div class="estimator-options-grid">
+                <button class="est-btn est-disc-btn selected" data-value="Branding & Identity System">Branding & Identity</button>
+                <button class="est-btn est-disc-btn" data-value="Editorial & Publication">Editorial / Magazines</button>
+                <button class="est-btn est-disc-btn" data-value="Posters & Print Series">Posters & Prints</button>
+                <button class="est-btn est-disc-btn" data-value="YouTube Packaging Kit">YouTube Thumbnails</button>
+                <button class="est-btn est-disc-btn" data-value="Social Media Batch System">Social Media System</button>
+                <button class="est-btn est-disc-btn" data-value="Complete Brand Package">Full Package</button>
+              </div>
+            </div>
+
+            <div class="estimator-field">
+              <label class="estimator-label">2. Target Timeline</label>
+              <div class="estimator-options-grid">
+                <button class="est-btn est-time-btn" data-value="Urgent (Under 1 Week)">Rush (&lt; 1 Week)</button>
+                <button class="est-btn est-time-btn selected" data-value="2-3 Weeks Standard">2–3 Weeks</button>
+                <button class="est-btn est-time-btn" data-value="1 Month Comprehensive">1 Month</button>
+                <button class="est-btn est-time-btn" data-value="Flexible / Ongoing Retainer">Retainer / Flexible</button>
+              </div>
+            </div>
+
+            <div class="estimator-field">
+              <label class="estimator-label">3. Budget Tier</label>
+              <div class="estimator-options-grid">
+                <button class="est-btn est-budget-btn" data-value="Indie / Startup">Startup / Indie</button>
+                <button class="est-btn est-budget-btn selected" data-value="Established Business">Established Brand</button>
+                <button class="est-btn est-budget-btn" data-value="Enterprise / Agency">Agency / Enterprise</button>
+                <button class="est-btn est-budget-btn" data-value="Custom Quote">Custom Quote</button>
+              </div>
+            </div>
+
+            <div class="estimator-summary-box">
+              <div class="est-sum-title">Generated Brief Preview</div>
+              <div class="est-sum-text" id="est-summary-text">
+                Looking for: Branding & Identity System · Timeline: 2-3 Weeks Standard · Budget Tier: Established Business.
+              </div>
+            </div>
+
+            <div class="est-action-btns">
+              <button class="btn-primary" id="est-email-brief-btn" data-cursor="SEND">
+                Send via Email ✉
+              </button>
+              <button class="btn-secondary" id="est-copy-brief-btn" data-cursor="COPY">
+                Copy Brief 📋
+              </button>
+            </div>
+          </div>
+        </div>
+
+        <!-- Site Footer -->
+        <footer class="site-footer">
+          <p>Yugal Vats — Graphic Design Studio, Delhi, India</p>
+          <p>© <span id="current-year"></span> All Works & Visuals Reserved</p>
+          <button class="back-to-top-btn" id="back-to-top" data-cursor="TOP">
+            Back to top ↑
+          </button>
+        </footer>
+      </div>
+    </section>
+  </main>
+
+  <!-- ============================================================
+       MODAL LIGHTBOX (Individual Project Inspector)
+       ============================================================ -->
+  <div class="lightbox-modal" id="lightbox-modal" role="dialog" aria-modal="true" aria-label="Project details">
+    <button class="lightbox-close-btn" id="lb-close-btn" aria-label="Close project view" data-cursor="CLOSE">✕</button>
+    <button class="lightbox-nav-btn prev" id="lb-prev-btn" aria-label="Previous project" data-cursor="PREV">‹</button>
+    <button class="lightbox-nav-btn next" id="lb-next-btn" aria-label="Next project" data-cursor="NEXT">›</button>
+
+    <div class="lightbox-content">
+      <div class="lightbox-image-stage">
+        <div id="lb-media" class="lightbox-media-gallery">
+          <img id="lb-img" src="" alt="Project Preview">
+        </div>
+      </div>
+      <div class="lightbox-details-stage">
+        <div class="lb-cat-badge" id="lb-category">Category</div>
+        <h2 class="lb-title" id="lb-title">Project Title</h2>
+        <div class="lb-subtitle" id="lb-subtitle">Project Subtitle</div>
+
+        <!-- Carousel button prominently FIRST — visible immediately on open -->
+        <button class="btn-primary" id="lb-carousel-btn" style="display:none; width:100%; justify-content:center; margin-bottom:20px;" data-cursor="CAROUSEL">
+          <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" style="flex-shrink:0"><rect x="3" y="3" width="18" height="18" rx="2"/><path d="M9 3v18M3 9h18"/></svg>
+          View Full Carousel ↗
+        </button>
+
+        <div class="lb-pov-container">
+          <div class="label">✦ Designer's POV</div>
+          <p id="lb-pov">POV description...</p>
+        </div>
+
+        <p class="lb-description" id="lb-desc">Full description...</p>
+
+        <div class="lb-tags-list" id="lb-tags"></div>
+      </div>
+    </div>
+  </div>
+
+  <!-- ============================================================
+       PANORAMIC CAROUSEL MODAL (High-Res Multi-Slide Viewer)
+       ============================================================ -->
+  <div class="carousel-modal" id="carousel-modal" role="dialog" aria-modal="true" aria-label="Full Carousel Viewer">
+    <div class="carousel-header-bar">
+      <div class="carousel-title-info">
+        <h3 class="carousel-project-title" id="carousel-project-title">Brand & Spreads Presentation</h3>
+        <span class="carousel-hint" id="carousel-hint">Scroll down or drag to inspect full presentation</span>
+      </div>
+      <button class="carousel-close-pill" id="carousel-close-btn" data-cursor="CLOSE">
+        <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><line x1="18" y1="6" x2="6" y2="18"/><line x1="6" y1="6" x2="18" y2="18"/></svg>
+        Close Presentation [Esc]
+      </button>
+    </div>
+
+    <div class="carousel-viewport-wrapper">
+      <div class="carousel-scroll-cue" id="carousel-scroll-cue" aria-hidden="true">← Drag or scroll to explore all 5 slides →</div>
+      <img class="carousel-full-image" id="carousel-full-image" src="" alt="Full Carousel Spread">
+    </div>
+  </div>
+
+  <!-- BACKGROUND AUDIO PLAYER (Plays essentials/ambient.mp3 or essentials/music.mp3 if present) -->
+  <audio id="bg-music" loop preload="auto">
+    <source src="essentials/ambient.mp3" type="audio/mpeg">
+    <source src="essentials/music.mp3" type="audio/mpeg">
+  </audio>
+
+  <!-- DATA & SCRIPTS -->
+  <script src="projects-data.js" defer></script>
+  <script src="app.js" defer></script>
+</body>
+</html>

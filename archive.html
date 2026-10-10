@@ -1,0 +1,132 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Complete Archive - YUGAL</title>
+  
+  <link rel="icon" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'><circle cx='50' cy='50' r='45' fill='%23c9a876'/><text x='50' y='65' font-family='sans-serif' font-size='50' font-weight='bold' fill='%2309090b' text-anchor='middle'>Y</text></svg>">
+  
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Instrument+Serif:ital@0;1&family=Plus+Jakarta+Sans:wght@300;400;500;600;700&family=Space+Grotesk:wght@400;500;600;700&family=Syne:wght@500;600;700;800&family=Space+Mono:wght@400;700&display=swap" rel="stylesheet">
+  
+  <link rel="stylesheet" href="style.css">
+</head>
+<body class="theme-dark">
+
+  <!-- AMBIENT BACKGROUNDS -->
+  <div id="grain" aria-hidden="true"></div>
+  <div class="ambient-glow glow-1" aria-hidden="true"></div>
+  <div class="ambient-glow glow-2" aria-hidden="true"></div>
+
+  <main>
+    <div style="padding: 2rem;">
+      <a href="index.html" class="btn-primary" style="display: inline-block; padding: 0.8rem 1.5rem; font-size: 0.9rem; margin-bottom: 2rem;">← Back to Home</a>
+    </div>
+    <section class="works-section" id="works">
+      <div class="page-container">
+        <div class="works-header">
+          <div>
+            <div class="section-tag">Complete Archive</div>
+            <h2 class="section-heading">Browse <em>the archive</em> (<span id="total-works">0</span>).</h2>
+          </div>
+          <div class="search-and-stats">
+            <div class="search-bar-wrap">
+              <svg class="search-icon" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="11" cy="11" r="8"/><path d="m21 21-4.35-4.35"/></svg>
+              <input type="text" id="search-works" placeholder="Search by title, style or tag..." aria-label="Search works">
+            </div>
+            <span class="search-match-count" id="match-count">Loading works…</span>
+          </div>
+        </div>
+
+        <div class="works-controls">
+          <div class="filter-pills-row" role="tablist">
+            <button class="filter-pill active" data-filter="branding" data-cursor="BRAND">
+              Branding & Packaging <span class="count" data-count-for="branding">0</span>
+            </button>
+            <button class="filter-pill" data-filter="editorial" data-cursor="EDIT">
+              Magazines <span class="count" data-count-for="editorial">0</span>
+            </button>
+            <button class="filter-pill" data-filter="editorial-covers" data-cursor="COVER">
+              Editorial Covers <span class="count" data-count-for="editorial-covers">0</span>
+            </button>
+            <button class="filter-pill" data-filter="posters" data-cursor="POSTER">
+              Posters & Prints <span class="count" data-count-for="posters">0</span>
+            </button>
+            <button class="filter-pill" data-filter="thumbnails" data-cursor="THUMB">
+              YouTube Thumbnails <span class="count" data-count-for="thumbnails">0</span>
+            </button>
+            <button class="filter-pill" data-filter="social" data-cursor="SOCIAL">
+              Social Media <span class="count" data-count-for="social">0</span>
+            </button>
+          </div>
+        </div>
+
+        <!-- Rendered by JavaScript -->
+        <div class="works-grid" id="works-grid"></div>
+      </div>
+    </section>
+  </main>
+  
+  <!-- ============================================================
+       MODAL LIGHTBOX (Individual Project Inspector)
+       ============================================================ -->
+  <div class="lightbox-modal" id="lightbox-modal" role="dialog" aria-modal="true" aria-label="Project details">
+    <button class="lightbox-close-btn" id="lb-close-btn" aria-label="Close project view" data-cursor="CLOSE">✕</button>
+    <button class="lightbox-nav-btn prev" id="lb-prev-btn" aria-label="Previous project" data-cursor="PREV">‹</button>
+    <button class="lightbox-nav-btn next" id="lb-next-btn" aria-label="Next project" data-cursor="NEXT">›</button>
+
+    <div class="lightbox-content">
+      <div class="lightbox-image-stage">
+        <div id="lb-media" class="lightbox-media-gallery">
+          <img id="lb-img" src="" alt="Project Preview">
+        </div>
+      </div>
+      <div class="lightbox-details-stage">
+        <div class="lb-cat-badge" id="lb-category">Category</div>
+        <h2 class="lb-title" id="lb-title">Project Title</h2>
+        <div class="lb-subtitle" id="lb-subtitle">Project Subtitle</div>
+
+        <button class="btn-primary" id="lb-carousel-btn" style="display:none; width:100%; justify-content:center; margin-bottom:20px;" data-cursor="CAROUSEL">
+          <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" style="flex-shrink:0"><rect x="3" y="3" width="18" height="18" rx="2"/><path d="M9 3v18M3 9h18"/></svg>
+          View Full Carousel ↗
+        </button>
+
+        <div class="lb-pov-container">
+          <div class="label">✦ Designer's POV</div>
+          <p id="lb-pov">POV description...</p>
+        </div>
+
+        <p class="lb-description" id="lb-desc">Full description...</p>
+
+        <div class="lb-tags-list" id="lb-tags"></div>
+      </div>
+    </div>
+  </div>
+
+  <!-- ============================================================
+       PANORAMIC CAROUSEL MODAL (High-Res Multi-Slide Viewer)
+       ============================================================ -->
+  <div class="carousel-modal" id="carousel-modal" role="dialog" aria-modal="true" aria-label="Full Carousel Viewer">
+    <div class="carousel-header-bar">
+      <div class="carousel-title-info">
+        <h3 class="carousel-project-title" id="carousel-project-title">Brand & Spreads Presentation</h3>
+        <span class="carousel-hint" id="carousel-hint">Scroll down or drag to inspect full presentation</span>
+      </div>
+      <button class="carousel-close-pill" id="carousel-close-btn" data-cursor="CLOSE">
+        <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><line x1="18" y1="6" x2="6" y2="18"/><line x1="6" y1="6" x2="18" y2="18"/></svg>
+        Close Presentation [Esc]
+      </button>
+    </div>
+
+    <div class="carousel-viewport-wrapper">
+      <div class="carousel-scroll-cue" id="carousel-scroll-cue" aria-hidden="true">← Drag or scroll to explore all 5 slides →</div>
+      <img class="carousel-full-image" id="carousel-full-image" src="" alt="Full Carousel Spread">
+    </div>
+  </div>
+  
+  <script src="projects-data.js" defer></script>
+  <script src="app.js" defer></script>
+</body>
+</html>
